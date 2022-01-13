@@ -40,7 +40,7 @@ public class ControllerSL {
     @GetMapping(path = "/hallo")
     public String getHallo() {
 
-        return "miau";
+        return "miau1";
     }
 
     @GetMapping(path = "/ListName")

@@ -12,8 +12,8 @@ import './FrameSet.css';
 // import BasicEditBox from "./BasicEditBox";
 
 import axios from 'axios'
-import {FetchListNameData, FetchListPData, IListNames} from "../Controller/DataService";
-import getAll, {getTodoById} from "../Controller/Fetching";
+import {FetchListNameData, FetchListPData, FetchString, IListNames} from "../Controller/DataService";
+import getAll, {getHallo, getTodoById} from "../Controller/Fetching";
 // import getAll, {getListById, getTodoById } from "../Controller/GetFetch";
 // import { FetchListNameData, IListNames } from "../Controller/DataService";
 // import MidFrame from "./MidFrame";
@@ -40,6 +40,11 @@ export interface IShopList {
 
 
 function DrawFrameSet() {
+
+    let tmpString:String = "No Server";
+    const [hallo, setHallo] = useState(tmpString);
+    useEffect(() => { getHallo()
+        .then(data => setHallo( FetchString(data) ) ) }, [])
 
     let tmpPersonalShopList:IPersonalShopList = {name: "", id: -1, list: []};
     const [listP, setListP] = useState(tmpPersonalShopList);
@@ -74,6 +79,7 @@ function DrawFrameSet() {
                             <Route path="/Edit" element={<Typography variant="h3">Edit</Typography>}/>
                             <Route path="/About" element={<Typography variant="h3">About</Typography>}/>
                         </Routes>
+                        <Typography variant="h3">{hallo}</Typography>
                         < DrawMenu/>
                     </div>
                 </header>

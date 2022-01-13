@@ -27,7 +27,7 @@ public class Controller2 {
     @GetMapping(path = "/hallo")
     public String getHallo() {
 
-        return "miau";
+        return "miau2";
     }
     @GetMapping(path = "/List/{id}")
     public String getTodoById(@PathVariable int id) {

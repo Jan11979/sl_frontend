@@ -16,6 +16,9 @@ async function getAll(src:string) {
 export const getTodoById = (id: any) =>
     axios.get(`http://localhost:8080/sl/List/${id}`).then(response => response.data)
 
+export const getHallo = () =>
+    axios.get(`http://localhost:8080/sl/hallo`).then(response => response.data)
+
 
 
 export default getAll;

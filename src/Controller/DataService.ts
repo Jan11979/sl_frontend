@@ -15,3 +15,8 @@ export const FetchListPData = (data: any): IPersonalShopList  => {
     let newData:IPersonalShopList = data;
     return newData;
 }
+
+export const FetchString = (data: any): String  => {
+    let newData:String = data;
+    return newData;
+}
