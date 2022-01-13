@@ -1,0 +1,6 @@
+#  Kein Kommentar
+#
+spring.data.mongodb:
+  database: janYML
+  host: localhost
+  port: 27017
