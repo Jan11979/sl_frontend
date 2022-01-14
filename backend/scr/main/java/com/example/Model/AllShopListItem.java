@@ -1,5 +1,4 @@
-package com.example.backend.Model;
-
+package com.example.backend2.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,12 +14,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document("p_list")
-public class PersonalShopList {
+@Document("all_list")
+public class AllShopListItem {
     @Id
-    int id;
-    String name;
-    public List<ShopListItem> list = new ArrayList<ShopListItem>();
+    private String id;
+    private String name;
+    public List<PersonalShopList> listP = new ArrayList<PersonalShopList>();
 
-
+    public AllShopListItem(String newName){
+        name = newName;
+    }
 }

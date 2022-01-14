@@ -16,7 +16,7 @@ export const FetchListPData = (data: any): IPersonalShopList  => {
     return newData;
 }
 
-export const FetchString = (data: any): String  => {
-    let newData:String = data;
+export const FetchString = (data: any): string[]  => {
+    let newData:string[] = data;
     return newData;
 }

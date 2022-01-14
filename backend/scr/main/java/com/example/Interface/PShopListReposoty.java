@@ -1,6 +1,7 @@
-package com.example.backend.Interface;
+package com.example.backend2.Interface;
 
-import com.example.backend.Model.PersonalShopList;
+
+import com.example.backend2.Model.PersonalShopList;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 
